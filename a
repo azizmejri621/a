@@ -1,0 +1,27 @@
+s = str(input(""))
+i = 0
+t = []
+while i < len(s) :
+    if s[i].isnumeric():
+        a = i
+        j = i
+        while True :
+            if s[j].isnumeric():
+                j+=1
+            else :
+                break
+
+        t.append(int(s[a:j]))
+        i = j 
+    else :
+        i += 1
+sum = t[0]
+m = 1
+for f in range (len(s)):
+    if s[f] == "+" :
+        sum += t[m]
+        m +=1
+    elif s[f] == "-" :
+        sum -= t[m]
+        m +=1
+        
