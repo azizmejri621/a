@@ -6,9 +6,12 @@ while i < len(s) :
         a = i
         j = i
         while True :
-            if s[j].isnumeric():
+            if j <= len(s) -1 :
+              if s[j].isnumeric():
                 j+=1
-            else :
+              else:
+                break
+            else : 
                 break
 
         t.append(int(s[a:j]))
@@ -24,4 +27,4 @@ for f in range (len(s)):
     elif s[f] == "-" :
         sum -= t[m]
         m +=1
-        
+print (sum)
